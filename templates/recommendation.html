@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.knowledge_level.label }} {{ form.knowledge_level() }}<br>
+        {{ form.desired_topics.label }} {{ form.desired_topics() }}<br>
+        {{ form.submit() }}
+    </form>
+
+    {% if videos %}
+        <h2>Recommended Videos:</h2>
+        <ul>
+        {% for video in videos %}
+            <li>
+                <a href="{{ video.url }}">{{ video.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <p><a href="{{ url_for('index') }}">Back to home</a></p>
+</body>
+</html>
