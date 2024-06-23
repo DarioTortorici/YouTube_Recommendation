@@ -29,10 +29,6 @@ Clone this repository to your local machine:
 git clone https://github.com/DarioTortorici/youtube_recommendation.git
 ```
 
-Certainly! Here's an improved version of the section on setting up a virtual environment in your README, including instructions for both Windows (using both native Python venv and Conda) and macOS/Linux:
-
----
-
 #### Set up Virtual Environment (optional but recommended)
 
 A virtual environment isolates dependencies for your project, preventing conflicts with other projects. Follow these steps to create and activate a virtual environment named `YTSuggestions`.
